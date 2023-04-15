@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios";
 import CountryList from "../CountryList";
-import dataCountries from "../db.json"
+import dataCountries from "../data.json"
 function StartPage() {
     const [data, setData] = useState([])
     const fetchCountries = async () => {
@@ -15,7 +15,7 @@ function StartPage() {
     }, [])
     const newArray = data.map((item) => {
         //console.log("1", item.name)
-        return <CountryList key={item.name.common} item={item}></CountryList>
+        return <CountryList key={item.name} item={item} allData={data}></CountryList>
     })
     return <div className='grid grid-cols-4 gap-x-20 px-20'>
         {newArray}</div>
