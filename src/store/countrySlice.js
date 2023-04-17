@@ -1,30 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const countrySlice = createSlice({
-    name: 'search',
+    name: 'country',
     initialState: {
         searchTerm: '',
-        data: [],
+        dataMy: [],
+        region: ''
 
     },
     reducers: {
         changeSearchTerm(state, action) {
             state.searchTerm = action.payload
         },
-        actionSearch(state, action) {
-            state.data = ({
-
-
-            })
-
-
+        filterByRegion(state, action) {
+            state.region = action.payload
         },
-        firstSearch(state, action) {
-
+        fetchData(state, action) {
+            state.dataMy = action.payload
         }
 
     }
 })
 
-export const { changeSearchTerm, actionSearch, firstSearch } = countrySlice.actions;
+export const { changeSearchTerm, filterByRegion, fetchData } = countrySlice.actions;
 export const CountryReducer = countrySlice.reducer;

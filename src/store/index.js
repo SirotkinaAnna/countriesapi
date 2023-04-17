@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { CountryReducer, changeSearchTerm, actionSearch, firstSearch } from "./countrySlice";
+import { CountryReducer, changeSearchTerm, filterByRegion, fetchData } from "./countrySlice";
 
 const store = configureStore({
     reducer: {
-        search: CountryReducer
+        country: CountryReducer
     }
 
 })
 
-export { store, changeSearchTerm, actionSearch, firstSearch };
+export { store, changeSearchTerm, filterByRegion, fetchData };

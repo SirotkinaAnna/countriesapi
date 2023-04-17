@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import sortPopulation from "./hooks/population-tostring";
+import { useSelector } from "react-redux";
 function CountryList({ item, allData }) {
     const navigate = useNavigate();
 

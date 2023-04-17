@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import StartPage from './components/Pages/StartPage';
 import DetailsPage from './components/Pages/DetailsPage';
 import TopHeader from './components/TopHeader';
-import SearchBar from './components/SearchBar';
+
 function App() {
 
   return <>
