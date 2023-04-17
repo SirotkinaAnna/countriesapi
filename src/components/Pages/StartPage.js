@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import CountryList from "../CountryList";
 import dataCountries from "../data.json"
 import SearchBar from "../SearchBar";
+
 function StartPage() {
     const [data, setData] = useState([])
     const fetchCountries = async () => {

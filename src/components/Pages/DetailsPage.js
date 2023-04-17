@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import BordersList from "../BordersList";
 import { BsArrowLeft } from 'react-icons/bs'
+import sortPopulation from "../hooks/population-tostring";
 function DetailsPage() {
     const { state } = useLocation();
     const navigate = useNavigate();
@@ -29,8 +30,8 @@ function DetailsPage() {
     })
     const allLanguages = languages.map((item) => {
         return item.name
-    })
-    console.log(allLanguages)
+    }).toString().replaceAll(',', ', ')
+
     return <>
         <button onClick={handleBack} className="my-16 rounded-lg mx-20 shadow-md px-6 py-2 flex items-center gap-2" ><BsArrowLeft /> Back</button>
         <div className="px-20 grid grid-cols-2 gap-20 ">
@@ -39,7 +40,7 @@ function DetailsPage() {
                 <div><h2 className="font-bold text-2xl py-10"> {name}</h2>
                     <div className="flex justify-between ">
                         <div className="space-y-2"><p className=""><span className="font-bold">Native Name: </span> {nativeName}</p>
-                            <p className=""><span className="font-bold">Population: </span>{population}</p>
+                            <p className=""><span className="font-bold">Population: </span>{sortPopulation(population)}</p>
                             <p className=""><span className="font-bold">Region: </span>{region}</p>
                             <p className=""><span className="font-bold">Sub Region: </span>{subregion}</p>
                             <p className=""><span className="font-bold">Capital: </span>{capital}</p>
@@ -47,7 +48,7 @@ function DetailsPage() {
                         <div className="space-y-2">
                             <p className=""><span className="font-bold">Top Level Domain: </span>{topLevelDomain}</p>
                             <p className=""><span className="font-bold">Currencies: </span>{allCurencies.toString()}</p>
-                            <p className=""><span className="font-bold">Languages: </span>{allLanguages.toString()}</p>
+                            <p className=""><span className="font-bold">Languages: </span>{allLanguages}</p>
                         </div>
                     </div></div>
                 <div className="flex items-center pb-6">

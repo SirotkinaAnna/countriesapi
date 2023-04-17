@@ -11,7 +11,7 @@ function BordersList({ item, allData }) {
             }
         })
     }
-    console.log("item", item)
+    //  console.log("item", item)
     return <button className="px-4 py-2 shadow-md" onClick={handleClick}>{item.name}</button>
 }
 export default BordersList
