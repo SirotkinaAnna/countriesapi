@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
-import axios from "axios";
+
 import CountryList from "../CountryList";
 import dataCountries from "../data.json"
+import SearchBar from "../SearchBar";
 function StartPage() {
     const [data, setData] = useState([])
     const fetchCountries = async () => {
@@ -17,8 +18,10 @@ function StartPage() {
         //console.log("1", item.name)
         return <CountryList key={item.name} item={item} allData={data}></CountryList>
     })
-    return <div className='grid grid-cols-4 gap-x-20 px-20'>
-        {newArray}</div>
+    return <>
+        <SearchBar />
+        <div className='grid grid-cols-4 gap-20 px-20 my-card py-6 rounded-lg'>
+            {newArray}</div></>
 
 
 }

@@ -4,9 +4,12 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import StartPage from './components/Pages/StartPage';
 import DetailsPage from './components/Pages/DetailsPage';
+import TopHeader from './components/TopHeader';
+import SearchBar from './components/SearchBar';
 function App() {
 
-  return <div className=''>Hi there
+  return <>
+    <TopHeader />
 
     <BrowserRouter>
 
@@ -20,7 +23,7 @@ function App() {
 
     {/* <div className='grid grid-cols-4 gap-x-20 px-20'>
       {newArray}</div> */}
-  </div>
+  </>
 
 }
 
