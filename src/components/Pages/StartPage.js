@@ -39,7 +39,7 @@ function StartPage() {
     })
     return <>
         <SearchBar />
-        <div className='grid grid-cols-4 gap-20 px-20 my-card py-6 rounded-lg'>
+        <div className='grid md:grid-cols-4 gap-20 px-8 md:px-20 my-card py-6'>
             {newArray}</div></>
 
 

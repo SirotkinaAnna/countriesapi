@@ -2,6 +2,28 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.dark,
+.dark .my-card {
+  background-color: hsl(207, 26%, 17%);
+  color: white;
+}
+
+nav.dark,
+.dark nav,
+.dark nav>*,
+.dark .div-dark>*,
+.dark .div-dark span,
+.dark .input-inside>*,
+.dark .input-inside {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+
+.dark .div-dark-border {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
 .my-card {
   background-color: hsl(0, 0%, 98%);
 }
