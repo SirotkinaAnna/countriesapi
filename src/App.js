@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import StartPage from './components/Pages/StartPage';
 import DetailsPage from './components/Pages/DetailsPage';
 import TopHeader from './components/TopHeader';
-
+import Footer from './components/Footer';
 function App() {
 
   return <>
@@ -20,9 +20,8 @@ function App() {
       </Routes>
 
     </BrowserRouter>
+    <Footer />
 
-    {/* <div className='grid grid-cols-4 gap-x-20 px-20'>
-      {newArray}</div> */}
   </>
 
 }
