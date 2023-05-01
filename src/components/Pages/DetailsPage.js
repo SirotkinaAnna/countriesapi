@@ -34,7 +34,7 @@ function DetailsPage() {
 
     return <>
         <button onClick={handleBack} className="mt-10 mb-16 md:my-16 rounded-lg mx-6 md:mx-20 shadow-md px-6 py-2 flex items-center gap-2 input-inside" ><BsArrowLeft /> Back</button>
-        <div className="px-6 pb-10 md:pb-24 md:px-20 grid md:grid-cols-2 md:gap-20 ">
+        <div className="px-6 pb-10 md:pb-24 md:px-20 grid md:grid-cols-2 md:gap-20 " role="article">
             <div className=" md:h-96"><img src={flags.png} alt="flag" className="shadow-md w-full h-full" /></div>
             <div className="md:grid  content-between">
                 <div><h2 className="font-bold text-2xl py-10"> {name}</h2>
